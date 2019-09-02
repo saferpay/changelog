@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="assets/css/vendors.css" />
+	<link rel="stylesheet" href="assets/css/helppage.css">
+
+	<title>Saferpay documentation | Changelog</title>
+</head>
+<body data-spy="scroll" data-target="#navScrollspy">
+
+	<div id="content" class="container-fluid">
+		<div>
+			<nav class="hidden-xs hidden-sm hidden-md" id="navScrollspy">
+				<div data-spy="affix" class="affix">
+
+					<h3>
+						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
+						<span class="text-primary">Changelog</span>
+					</h3>
+					<ul class="nav">
+							<li class="active">
+							<a href="#intro">Introduction</a>
+							</li>
+														<li class="active">
+							<a href="#r81">Release R81</a>
+							</li>
+					</ul>
+				</div>
+			</nav>
+
+			<span class="print-page-break"></span>
+
+			<main>
+				<div class="hidden-print hidden-lg">
+					<div id="navCollapse">
+
+						<button class="menu-btn" type="button" data-toggle="collapse" data-target="#menu-collapse">
+							<span class="glyphicon glyphicon-menu-hamburger"></span>
+							<h3 style="display: inline-block">
+								<span style="font-size: x-large; font-weight: bold">Saferpay</span>
+								<span class="text-primary">Changelog</span>
+							</h3>
+						</button>
+
+					</div>
+
+					<ul class="nav collapse" id="menu-collapse">
+							<li class="active">
+							<a href="#intro">Introduction</a>
+							</li>
+							<li>
+							<a href="#r81">Release R81</a>
+							</li>
+					</ul>
+				</div>				
+<section id="intro"><h1><a name="intro"></a>Introduction</h1><div class="row"><div class="col-md-6"><p>Latest technical features, modifications and enhancements concerning the e-payment solution Saferpay from Worldline/SIX Payment Services.</p></div><div class="col-md-6"><p><strong>Test accounts:</strong></p><p><a target="_blank" href="https://test.saferpay.com/BO/Welcome">Request your personal test account</a><br>
+<a target="_blank" href="https://www.six-payment-services.com/en/site/e-commerce/support/testaccount.html#test-account">View shared test account data</a></p>
+<p><strong>JSON API</strong></p><p><a target="_blank" href="http://saferpay.github.io/jsonapi/">Saferpay JSON API Spec</a><br>
+</p>
+</div></div><div class="row"><div class="col-md-6"></div></div></section>
+	<section id="r81"><h1><a name="Release R81"></a>Release R81</h1><div class="row"><div class="col-md-6">
+		
+		<p>
+			<div class="info">
+  <p>
+  	<strong>Release Date: 17/09/2019</strong><br/>Available on Sandbox: 10/08/2019</p>
+</div></p>
+
+<p>
+	<h2>JSON API</h2>
+	<a href="http://saferpay.github.io/jsonapi/#v1.13.0.0.20190917" target="_blank">Version 1.13</a>
+	</p>
+	<p>
+	<h2>Added a third gender option</h2>
+	<p>
+	German law introduced a third gender "diverse"
+	</p>
+JSON API
+	<ul>
+	<li>Added value <code>diverse</code> for the gender field in payment initialization and authorization requests and responses</li>
+</ul>
+Payment Page, Secure Payment Gateway & emails
+<ul>
+	<li>Added third "diverse" gender in the address forms and offers</li>
+	<li>Adjusted the salutations in emails</li>
+</ul>
+	</p>
+	<p>
+	<h2>New Feature Manual SEPA Refunds</h2>
+	<p>Saferpay now offers a manual refund solution for iDEAL, SOFORT and SEPA Direct Debit (InterCard ELV) payments</p>
+	<ul>
+	<li>Alternative payment means refund via the Saferpay Backoffice and JSON API is now available</li>
+	<li>A table view to manage and download a refund file was created in the Saferpay Backoffice</li>
+	<li>Export file is in PAIN format containing SEPA Credit Transfer transactions to upload into the merchant online banking for processing</li>
+	<li>An email notification will be triggered, if there are not-exported SEPA refunds older than seven days</li>
+</ul>
+	</p>
+	<p>
+	<h2>Ability to differ between invalid and unsupported IBAN</h2>
+JSON API & Backoffice
+	<ul>
+	<li>Adjusted error response</li>
+</ul>
+Payment Page
+	<ul>
+	<li>Added error message for customers using the Payment Page</li>
+</ul>
+	</p>
+<p>
+	<h2>Added Support for international SEPA Direct Debit</h2>
+Backoffice
+	<ul>
+	<li>Added a setting to enable whether non-DE IBAN are accepted or not</li>
+</ul>
+	</p>
+<p><h2>SPG Improvements</h2>
+	<ul>
+	<li>Added authorization type <code>Final authorization with auto-capture</code></li>
+		<li>Removed global settings "Register automatically"</li>
+		<li>Added new global settings to define the standard authorization type for templates and offers</li>
+</ul>
+	</p>
+	<p><h2>Accept Kosovo as an additional country</h2>
+JSON API
+	<ul>
+	<li>Added <code>XK</code> as country code</li>
+</ul>
+Payment Page
+	<ul>
+	<li>Kosovo can be selected in address forms on the Payment Page</li>
+</ul>
+	</p>
+<p><h2>Improved Amount Formatting</h2>
+Payment Page, Backoffice and emails
+	<ul>
+	<li>Amounts are formatted in the correct country specific way</li>
+</ul>
+	</p>
+<p><h2>Improvement to Bancontact Direct Mode (released in July 2019)</h2>
+JSON API
+	<ul>
+	<li>Added <code>DefaultRedirectUrl</code> and <code>CompletionRedirectUrl</code> which will be forwarded to Bancontact App to guarantee a correct redirect to initial App after Bancontact Authentication</li>
+</ul>
+	</p>
+	</div>
+
+<div class="col-md-6"></div></div><div class="row"><div class="col-md-6"></div></div></section><section id="formats"><h1><a name="formats"></a>Formats</h1><div class="row"><div class="col-md-6"><p>The Saferpay JSON Api uses unified and standardized formats. The following abbreviations for format information are used in this page:</p>
+
+	</main>
+
+		</div>
+	</div>
+
+	<div class="scroll-top-wrapper">
+		<a href="#top" class="scroll-top-inner" onclick="$('html,body').animate({ scrollTop: 0 }, 'slow'); return false;">
+			<span class="glyphicon glyphicon-chevron-up"></span> Back to Top
+		</a>
+	</div>
+
+	<script src="assets/js/vendors.js"></script>
+	<script src="assets/js/helppage.js"></script>
+</body>
+</html>
+
