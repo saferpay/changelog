@@ -33,6 +33,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li class="active">
+							<a href="#2020-03">Release 2020-03</a>
+							</li>
+							<li class="active">
 							<a href="#2020-01">Release 2020-01</a>
 							</li>
 							<li class="active">
@@ -42,6 +45,7 @@
 							<a href="#2019-09">Release 2019-09</a>
 							</li>
 					</ul>
+					<img src="saferpay_retro.jpg" alt="Saferpay" width="200">
 				</div>
 			</nav>
 
@@ -66,6 +70,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li>
+							<a href="#2020-03">Release 2020-03</a>
+							</li>
+							<li>
 							<a href="#2020-01">Release 2020-01</a>
 							</li>
 							<li>
@@ -77,11 +84,76 @@
 					</ul>
 				</div>				
 <section id="intro"><h1><a name="intro"></a>Introduction</h1><div class="row"><div class="col-md-6">
-<p>Latest technical features, modifications and enhancements concerning the e-payment solution Saferpay from Worldline/SIX Payment Services.</p></div><div class="col-md-6">
+<p>Latest technical features, modifications and enhancements concerning the e-payment solution Saferpay from Worldline/SIX Payment Services.</p></div>
+
+<div class="col-md-6">
 <strong>JSON API</strong><br/><a target="_blank" href="http://saferpay.github.io/jsonapi/">Saferpay JSON API Spec</a><br>
 <a target="_blank" href="http://saferpay.github.io/jsonapi/#changelog">Saferpay JSON API Changelog</a>
 </div></div><div class="row"><div class="col-md-6"></div></div></section>
 	
+<section id="2020-03"><h1><a name="Release 2020-03"></a>Release 2020-03</h1><div class="row"><div class="col-md-6">
+		
+		<p>
+			<div class="info">
+  <p>
+  	<strong>Release Date: 2020-03-17</strong><br/>Available on Sandbox: 2020-03-03</p>
+</div></p>
+
+<p>
+	<h2>JSON API</h2>
+	<a href="http://saferpay.github.io/jsonapi/#v1.16.0.0.20200317" target="_blank">Version 1.16</a>
+	</p>
+	<h2>Strong Customer Authentication: Exemptions</h2>
+<ul>
+	<li>Added flags in JSON API for merchants to request SCA exemptions</li>
+	<li>Added support of "soft decline": decline from issuer with a request for Strong Customer Authentication</li>
+</ul>
+		<p>
+			<div class="warning">
+  <p>
+The use of SCA Exemptions is currently supported for Mastercard and Visa transactions that are processed by Worldline/SIX Payment Services and requires an updated acquiring agreement.
+ 	</p>
+</div></p>
+		<p>
+			<div class="warning">
+  <p>
+The functionality requesting SCA exemptions from merchant side does not have yet a sounding support in the payment eco-system. We expect full support of it's functionality by all necessary players by Q4 2020.
+ 	</p>
+</div></p>
+	<h2>PSD2 Compliancy: Card Registration and Alias Management</h2>
+<ul>
+	<li>Added authentication flow in card registration <code>Alias/Insert</code></li>
+	<li>Added authentication result information in <code>Alias/AssertInsert</code></li>
+	<li>Added authentication result from alias storing in the Saferpay Backoffice</li>
+	<li>Added flags to force Strong Customer Authentication with the following values</li>
+		<ul>
+			<li>force</li>
+			<li>avoid</li>
+			<li>no preference</li>
+		</ul>
+	<li>Added automatic enforcement of Strong Customer Authentication in case the initial recurring or installment transaction is in scope of PSD2</li>
+</ul>
+		<p>
+			<div class="warning">
+  <p>
+  The authentication for card registration is only possible with acquiring from Worldline/SIX Payment Services [Mastercard and Visa] and 3-D Secure 2 capable issuers.
+ 	</p>
+</div></p>
+<h2>Transaction Points Overview in the Saferpay Backoffice</h2>
+<p>A new page is added in the Saferpay Backoffice with an overview of the transaction points usage</p>
+<h2>Saferpay Fields Improvements</h2>
+<ul>
+	<li>Added support for customers using 3rd-party cookies</li>
+</ul>
+<h2>PostFinance Card & E-Finance Simulator</h2>
+<p>A new simulator with the following use cases for PaymentPage Initialize/Assert and Secure Card Data</p>
+<ul>
+	<li>Good case</li>
+	<li>Bad case</li>
+	<li>Canceled by customer</li>
+</ul>
+<p>Available on our <a href="https://test.saferpay.com/BO/Welcome" target="_blank">Sandbox</a></p>
+</section>
 <section id="2020-01"><h1><a name="Release 2020-01"></a>Release 2020-01</h1><div class="row"><div class="col-md-6">
 		
 		<p>
