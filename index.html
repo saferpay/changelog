@@ -33,6 +33,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li class="active">
+							<a href="#2020-07">Release 2020-07</a>
+							</li>
+							<li class="active">
 							<a href="#2020-05">Release 2020-05</a>
 							</li>
 							<li class="active">
@@ -72,6 +75,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li>
+							<a href="#2020-07">Release 2020-07</a>
+							</li>
+							<li>
 							<a href="#2020-05">Release 2020-05</a>
 							</li>
 							<li>
@@ -95,6 +101,46 @@
 <strong>JSON API</strong><br/><a target="_blank" href="http://saferpay.github.io/jsonapi/">Saferpay JSON API Spec</a><br>
 <a target="_blank" href="http://saferpay.github.io/jsonapi/#changelog">Saferpay JSON API Changelog</a>
 </div></div><div class="row"><div class="col-md-6"></div></div></section>
+<section id="2020-07"><h1><a name="Release 2020-07"></a>Release 2020-07</h1><div class="row"><div class="col-md-6">
+		
+		<p>
+			<div class="info">
+  <p>
+  	<strong>Release Date: 2020-07-14</strong><br/>Available on Sandbox: 2020-06-30</p>
+</div></p>
+
+<p>
+	<h2>JSON API</h2>
+	<a href="http://saferpay.github.io/jsonapi/#v1.18.0.0.20200714" target="_blank">Version 1.18</a>
+	</p>
+	<h2>Support of Payer ID</h2>
+<p>You can now provide a payer ID to link transactions and stored aliases to your client by providing a unique ID. The Payer ID will help you filter, search and analyze transactions and aliases linked to your native system like CRM.</p>
+	<p>Saferpay is extending this functionality step by step, so far we've implemented:</p>
+	<ul>
+	<li>Authorize/Direct API call</li>
+	<li>Journal search and export</li>
+	<li>Declined transactions and export</li>
+	</ul>
+	<h2>Saferpay Fields Improvements</h2>
+	<ul>
+	<li>Server-side BIN range detection</li>
+</ul>
+	<h2>Saferpay Backoffice Improvements</h2>
+	<ul>
+	<li>The expiry date drop-down fields were replaced with text input fields as used with Saferpay Fields</li>
+	<li>A warning is shown if the refund amount exceeds the cumulated captured amount.</li>
+	</ul>
+	<h2>Saferpay Secure PayGate Card Registration</h2>
+<p>You can now store a card in the Saferpay Secure Card Data by sending a payment link created in the Saferpay Backoffice or via API</p>
+	<h2>Support for Expired Cards</h2>
+<p>Saferpay now accepts cards with all expiry dates and processes them according to the response of the issuer.</p>
+	<ul>
+	<li>An expired card will no longer be refused in JSON API calls</li>
+	<li>Entering an expired card will show a warning in the Saferpay Backoffice but will not be refused</li>
+	</ul>
+
+</p>
+	</section>
 	<section id="2020-05"><h1><a name="Release 2020-05"></a>Release 2020-05</h1><div class="row"><div class="col-md-6">
 		
 		<p>
