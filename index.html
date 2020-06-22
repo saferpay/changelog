@@ -117,11 +117,10 @@
 <p>You can now provide a payer ID to link transactions and stored aliases to your client by providing a unique ID. The Payer ID will help you filter, search and analyze transactions and aliases linked to your native system like CRM.</p>
 	<p>Saferpay is extending this functionality step by step, so far we've implemented:</p>
 	<ul>
-	<li>Authorize/Direct API call</li>
+	<li>Transaction/AuthorizeDirect  API call</li>
 	<li>PaymentPage/Initialize API call (Transaction)</li>
 	<li>Transaction/Initialize API call (Transaction)</li>
 	<li>Journal search</li>
-	<li>Declined transactions search</li>
 	</ul>
 	<h2>Saferpay Fields Improvements</h2>
 	<ul>
@@ -134,7 +133,7 @@
 	</ul>
 	<h2>Saferpay Secure PayGate Card Registration</h2>
 <p>You can now store a card in the Saferpay Secure Card Data by sending a payment link created in the Saferpay Backoffice or via API.</p>
-	<h2>Support for Expired Cards</h2>
+	<h2>Switch check for Expired Cards to Issuer</h2>
 <p>Saferpay now accepts cards with all expiry dates and processes them according to the response of the issuer.</p>
 	<ul>
 	<li>An expired card will no longer be refused in JSON API calls</li>
