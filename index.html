@@ -25,6 +25,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li class="active">
+							<a href="#2020-11">Release 2020-11</a>
+							</li>
+							<li class="active">
 							<a href="#2020-09">Release 2020-09</a>
 							</li>
 							<li class="active">
@@ -70,6 +73,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li>
+							<a href="#2020-11">Release 2020-11</a>
+							</li>
+							<li>
 							<a href="#2020-09">Release 2020-09</a>
 							</li>
 							<li>
@@ -99,8 +105,60 @@
 <strong>JSON API</strong><br/><a target="_blank" href="http://saferpay.github.io/jsonapi/">Saferpay JSON API Spec</a><br>
 <a target="_blank" href="http://saferpay.github.io/jsonapi/#changelog">Saferpay JSON API Changelog</a>
 </div></div><div class="row"><div class="col-md-6"></div></div></section>
-<section id="2020-09"><h1><a name="Release 2020-09"></a>Release 2020-09</h1><div class="row"><div class="col-md-6">
+
+
+
+
+<section id="2020-11">
+	<h1><a name="Release 2020-11"></a>Release 2020-11</h1>
+	<div class="row">
+		<div class="col-md-6">
+			
+			<div class="info">
+		  	<p><strong>Release Date: 2020-11-10</strong><br/>Available on Sandbox: 2020-10-27</p>
+			</div>
+			<h2>JSON API</h2>
+			<a href="http://saferpay.github.io/jsonapi/#v1.20.0.0.20201110" target="_blank">Version 1.20</a>
+
+			<h2>Fraud Prevention Enterprise</h2>
+			<p>Saferpay extends Fraud Prevention module with additional features:</p>
+			<ul>
+				<li>Fraud check is now available for all supported card brands</li>
+				<li>Added support for the Bancontact QR flow</li>
+				<li>Fraud check support for MIT payments</li>
+				<li>Suspected fraud can be flagged in the Saferpay Backoffice</li>
+			</ul>
+			
+			<h2>Saferpay Fields Improvements</h2>
+			<p>The Saferpay Field functionality was extended and improved:</p>
+			<ul>
+				<li>The CVC field is now set mandatory except for cards where no CVC exists</li>
+				<li>Added preselection support for BonusCard and MyOne</li>
+			</ul>
+			
+			<h2>Always use authorized brand in later SCD payments</h2>
+			<p>
+				An SCD alias of a co-branded card is now stored together with the brand chosen by the cardholder for the authorization. 
+				This is to ensure that in later alias payments the same brand is being used again.
+			</p>
+			<div class="warning">
+				The terminal used for the alias payment must have the brand activated which was used in the authorization.
+			</div>
+			
+			<h2>New Feature: Partial Approval (amount-reduced authorization)</h2>
+			<p>
+				The AllowPartialAuthorization flag can be set in Direct Authorizations, 
+				to allow that the issuer can authorize a lower amount than requested, 
+				in case that the cardholder has no sufficient funds or reached the card limit.
+			</p>
 		
+		</div>
+	</div>	
+</section>
+
+
+
+<section id="2020-09"><h1><a name="Release 2020-09"></a>Release 2020-09</h1><div class="row"><div class="col-md-6">
 		<p>
 			<div class="info">
   <p>
@@ -112,7 +170,7 @@
 	<a href="http://saferpay.github.io/jsonapi/#v1.19.0.0.20200915" target="_blank">Version 1.19</a>
 	</p>
 	<h2>Fraud Prevention Enterprise</h2>
-		<p>Saferpay extends Fraud Prevention Module with additional features:</p>
+		<p>Saferpay extends Fraud Prevention module with additional features:</p>
 		<ul>
 			<li>Fraud checks can be activated/deactivated for individual payment methods in Saferpay Backoffice</li>
 			<li>JSON API extended with additional data points for fraud check</li>
