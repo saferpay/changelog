@@ -25,6 +25,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li class="active">
+							<a href="#2021-01">Release 2021-01</a>
+							</li>
+							<li class="active">
 							<a href="#2020-11">Release 2020-11</a>
 							</li>
 							<li class="active">
@@ -73,6 +76,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li>
+							<a href="#2021-01">Release 2021-01</a>
+							</li>
+							<li>
 							<a href="#2020-11">Release 2020-11</a>
 							</li>
 							<li>
@@ -106,6 +112,45 @@
 <a target="_blank" href="http://saferpay.github.io/jsonapi/#changelog">Saferpay JSON API Changelog</a>
 </div></div><div class="row"><div class="col-md-6"></div></div></section>
 
+
+
+<section id="2021-01">
+	<h1><a name="Release 2021-01"></a>Release 2021-01</h1>
+	<div class="row">
+		<div class="col-md-6">
+			
+			<div class="info">
+		  	<p><strong>Release Date: 2021-01-19</strong><br/>Available on Sandbox: 2021-01-05</p>
+			</div>
+			<h2>JSON API</h2>
+			No changes.
+			
+			<h2>3-D Secure 2.2</h2>
+			<p>Saferpay upgraded to the latest 3-D Secure version 2.2 for Visa Secure, Mastercard ID Check and American Express Safekey.</p>
+
+			<h2>Soft Decline Handling</h2>
+			
+			<p>With the beginning of 2021 important PSD2 deadlines became active, forcing issuers to respond with a so called Soft Decline to certain not fully authenticated authorizations.</p>
+
+			<div class="warning">It is highly recommended for every merchant in PSD2 scope to implement proper handling of Soft Declines.</div>
+			<br/>
+			<p>In case of a Soft Decline, the merchant needs to contact the payer so he can initiate another authorization with SCA.
+			In case of <a href="https://saferpay.github.io/sndbx/recurring.html">Recurring Payments</a>, a new initial transaction has to be made, or a new Alias with SCA and a forced challenge flow needs to be created.
+			<br/>
+			For details on how to handle Soft Declines, please refer to the <a href="https://saferpay.github.io/sndbx/psd2.html#psd2-decline">Saferpay Integration Guide</a>.</p>
+			
+			<h2>MIT and Alias Handling</h2>
+			<p>All Aliases registered after the January release will have an SCA Transaction Stamp, which is sent in subsequent transactions using this Alias. This means that newly registered Aliases might have a better approval rate compared with the old ones which don't have an SCA Transaction Stamp.</p>
+			
+			<h2>Klarna Payments: Support for multi-part capture and refunds</h2>
+			<p>Multi-part captures and refunds are now available for Klarna Payments through the API and the Saferpay Backoffice. This allows you to partially capture an order to send and bill it in separate parts.</p>
+			
+			<h2>Extended Omni-Channel capabilities</h2>
+			<p>Saferpay is now connected to the omni-channel platform of Worldline. This allows merchants to track transactions from Saferpay and other solutions combined in one portal.</p>
+			
+		</div>
+	</div>	
+</section>
 
 
 
