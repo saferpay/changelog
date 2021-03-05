@@ -25,6 +25,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li class="active">
+							<a href="#2021-03">Release 2021-03</a>
+							</li>
+							<li class="active">
 							<a href="#2021-01">Release 2021-01</a>
 							</li>
 							<li class="active">
@@ -76,6 +79,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li>
+							<a href="#2021-03">Release 2021-03</a>
+							</li>
+							<li>
 							<a href="#2021-01">Release 2021-01</a>
 							</li>
 							<li>
@@ -111,6 +117,54 @@
 <strong>JSON API</strong><br/><a target="_blank" href="http://saferpay.github.io/jsonapi/">Saferpay JSON API Spec</a><br>
 <a target="_blank" href="http://saferpay.github.io/jsonapi/#changelog">Saferpay JSON API Changelog</a>
 </div></div><div class="row"><div class="col-md-6"></div></div></section>
+
+
+
+<section id="2021-03">
+	<h1><a name="Release 2021-03"></a>Release 2021-03</h1>
+	<div class="row">
+		<div class="col-md-6">
+			
+			<div class="info">
+		  	<p><strong>Release Date: 2021-03-23</strong><br/>Available on Sandbox: 2021-03-09</p>
+			</div>
+			<h2>JSON API</h2>
+			<a href="http://saferpay.github.io/jsonapi/#v1.21.0.0.20210323" target="_blank">Version 1.21</a>
+			
+			<h2>Fraud Intelligence Enterprise</h2>
+			<p>Transaction Risk Analysis (TRA) and Low Value Payment (LVP) exemptions can now be automated. 
+			Risk appetite, velocity checks and other criteria can be defined as conditions. 
+			The exemptions are then automatically requested if applicable for the current transaction and all other specified conditions are met.</p>
+
+			<p>Transactions checked by Fraud Intelligence now show also the calculated risk score and Fraud Intelligence Insights in the Backoffice transaction detail views.</p>
+
+			<h2>Additional Risk Management details</h2>
+			<p>A new BlockReason field is added to JSON API responses if the transaction was blocked by the Saferpay Risk Management. 
+			The BlockReason tells whether the transaction was blocked due to IP address, IP location, issuer country or card blacklist entries.</p>
+
+			<h2>Exemption details shown in Backoffice</h2>
+			<p>The transaction details in the Transaction Journal and Declined Journal now show if a Transaction Risk Analysis (TRA) or Low Value Payment (LVP) exemption was requested.</p>
+
+			<h2>Payment initiator for direct authorizations</h2>
+			<p>A new Initiator field in Transaction/AuthorizeDirect requests can be used to indicate whether the transaction was initiated by the merchant (default) or by the payer.</p>
+
+			<h2>Issuer reference for SAQ-A EP certified merchants</h2>
+			<p>The response of every successful authorization now contains an IssuerReference with a TransactionStamp and in case of a Mastercard transaction, a SettlementDate. 
+			The TransactionStamp and SettlementDate can be used to reference the authorization even if it was made by a business partner or via another PSP.</p>
+			<p>To reference an existing authorization, the IssuerReference can be passed on in Transaction/AuthorizeDirect requests.</p>
+
+			<h2>New Feature: Create Saferpay Fields Access Tokens via API</h2>
+			<p>Saferpay Fields Access Tokens can now be created by calling SaferpayFields ApiKeys in the Saferpay Management API.</p>
+
+			<h2>New payment method features</h2>
+			<ul>
+				<li>Added Klarna Payments support for Italy</li>
+				<li>Added support for American Express account verifications (online checks) with optional SCA during Secure Card Data alias registration</li>
+			</ul>
+
+		</div>
+	</div>	
+</section>
 
 
 
@@ -151,9 +205,6 @@
 		</div>
 	</div>	
 </section>
-
-
-
 <section id="2020-11">
 	<h1><a name="Release 2020-11"></a>Release 2020-11</h1>
 	<div class="row">
@@ -165,8 +216,8 @@
 			<h2>JSON API</h2>
 			<a href="http://saferpay.github.io/jsonapi/#v1.20.0.0.20201110" target="_blank">Version 1.20</a>
 
-			<h2>Fraud Prevention Enterprise</h2>
-			<p>Saferpay extends Fraud Prevention module with additional features:</p>
+			<h2>Fraud Intelligence Enterprise</h2>
+			<p>Saferpay extends Fraud Intelligence module with additional features:</p>
 			<ul>
 				<li>Fraud check is now available for all supported card brands</li>
 				<li>Added support for the Bancontact QR flow</li>
@@ -200,9 +251,6 @@
 		</div>
 	</div>	
 </section>
-
-
-
 <section id="2020-09"><h1><a name="Release 2020-09"></a>Release 2020-09</h1><div class="row"><div class="col-md-6">
 		<p>
 			<div class="info">
@@ -214,8 +262,8 @@
 	<h2>JSON API</h2>
 	<a href="http://saferpay.github.io/jsonapi/#v1.19.0.0.20200915" target="_blank">Version 1.19</a>
 	</p>
-	<h2>Fraud Prevention Enterprise</h2>
-		<p>Saferpay extends Fraud Prevention module with additional features:</p>
+	<h2>Fraud Intelligence Enterprise</h2>
+		<p>Saferpay extends Fraud Intelligence module with additional features:</p>
 		<ul>
 			<li>Fraud checks can be activated/deactivated for individual payment methods in Saferpay Backoffice</li>
 			<li>JSON API extended with additional data points for fraud check</li>
