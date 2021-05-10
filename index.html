@@ -25,6 +25,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li class="active">
+							<a href="#2021-05">Release 2021-05</a>
+							</li>
+							<li class="active">
 							<a href="#2021-03">Release 2021-03</a>
 							</li>
 							<li class="active">
@@ -79,6 +82,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li>
+							<a href="#2021-05">Release 2021-05</a>
+							</li>
+							<li>
 							<a href="#2021-03">Release 2021-03</a>
 							</li>
 							<li>
@@ -118,6 +124,50 @@
 <a target="_blank" href="http://saferpay.github.io/jsonapi/#changelog">Saferpay JSON API Changelog</a>
 </div></div><div class="row"><div class="col-md-6"></div></div></section>
 
+
+
+<section id="2021-05">
+	<h1><a name="Release 2021-05"></a>Release 2021-05</h1>
+	<div class="row">
+		<div class="col-md-6">
+			
+			<div class="info">
+		  	<p><strong>Release Date: 2021-05-18</strong><br/>Available on Sandbox: 2021-05-04</p>
+			</div>
+			<h2>JSON API</h2>
+			<a href="http://saferpay.github.io/jsonapi/#changelog" target="_blank">Version 1.22</a>
+			
+			<h2>Crypto payments in the Saferpay Payment Page</h2>
+			<p>Bitcoin (BTC) and Ethereum (ETH) crypto payments go live for selected pilot merchants.<br/>
+			An announcement will be made as soon as the solution becomes available for all merchants.</p>
+			<ul>
+				<li>Full payment guarantee for merchants</li>
+				<li>Swiss Francs (CHF) is only supported currency</li>
+			</ul>
+			
+			<h2>Eps refunds and giropay over eps</h2>
+			<p>Refunds on eps payments are now available except in some cases where the issuer eps scheme doesn't have the required data to process the refund.<br/>
+			Furthermore it is now possible to process giropay payments via eps.</p>
+			
+			<h2>Additional languages and currencies for direct bank transfer by Klarna</h2>
+			<p>The direct bank transfer by Klarna (formerly known as SOFORT respective Sofort&uuml;berweisung) payment integration was extended to support the additional 
+			languages Spanish (ES), Hungarian (HU), Italian (IT), Slovak (SK) and Czech (CS).
+			Also the supported currencies have been extended and PLN, HUF und CZK have been added.</p>
+			
+			<h2>Extended PSD2 relevant information</h2>
+			<p>The responses to PaymentPage/Assert, Transaction/Authorize, Transaction/Inquire and Transaction/QueryAlternativePayment have been extended 
+			with additional PSD2 relevant information.<p/>
+			<p>The Liability container now contains a new field "InPsd2Scope" with possible values YES, NO or UNKNOWN.</p>
+			<p>The ThreeDs container has been extended with two new fields:<br/>
+			Field "Version" shows which 3-D Secure version has been used and the "AuthenticationType" field with possible values ATTEMPT, FRICTIONLESS, SCA or NONE 
+			indicates the type of the authentication.</p>
+			
+			<h2>Shopify plugin configuration via Backoffice</h2>
+			<p>The new Shopify plugin can now be configured in the Saferpay Backoffice.<br/>
+			Additional information about the Shopify plugin and the configuration process will be made available soon.</p>
+		</div>
+	</div>	
+</section>
 
 
 <section id="2021-03">
