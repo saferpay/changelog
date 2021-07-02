@@ -152,11 +152,13 @@
 			<a href="http://saferpay.github.io/jsonapi/#changelog" target="_blank">Version 1.23</a>
 			
 			<h2>WL Crypto Payments</h2>
-			<p>Added support for refunds of crypto payments. Details can be found in the Integration Guide.</p>
+			<p>Added support for refunds of crypto payments. Details can be found in the 
+				<a href="https://saferpay.github.io/sndbx/crypto.html" target="_blank">Integration Guide</a>.
+			</p>
 			
 			<h2>Other payment method changes</h2>
 			<ul>
-				<li>Added support for Klarna Payments in France.</li>
+				<li>Added support for <a href="https://saferpay.github.io/sndbx/KlarnaPayments.html" target="_blank">Klarna Payments</a> in France.</li>
 				<li>Bonus Card is discontinued as an independent payment method, <br/>
 					existing cards can still be used and are now processed as Visa cards.</li>
 			</ul>
@@ -167,34 +169,43 @@
 				This functionality is currently available for card transactions and Alipay payments.</p>
 
 			<h2>Added notification URLs in Transaction/Initialize</h2>
-			<p>Transaction/Initialize was extended with a SuccessNotifyUrl and FailureNotifyUrl where server to server push notifications can be received.</p>
+			<p><a href="http://saferpay.github.io/jsonapi/#Payment_v1_Transaction_Initialize" target="_blank">Transaction/Initialize</a> 
+				was extended with a SuccessNotifyUrl and FailureNotifyUrl where server to server push notifications can be received.
+			</p>
 
 			<h2>Alias/InsertDirect with existing Transaction Stamp</h2>
-			<p>Alias/InsertDirect added support to provide an existing Transaction Stamp when available.
+			<p><a href="http://saferpay.github.io/jsonapi/#Payment_v1_Alias_InsertDirect" target="_blank">Alias/InsertDirect</a> 
+				added support to provide an existing Transaction Stamp when available.
 				This functionality is relevant only for PCI SAQ-D certified merchants who are allowed to handle and store plaintext card data.</p>
 				
 			<h2>Scheme token processing via Transaction Interface</h2>
 			<p>The Transaction Interface was extended to support processing scheme tokens. Typical use cases are merchants who integrated wallets 
-				(e.g. Apple Pay, Samsung Pay, Google Pay), process credit cards through Saferpay and like to do this as well for the tokens.</p>
+				(e.g. Apple Pay, Samsung Pay, Google Pay), process credit cards through Saferpay and like to do this as well for the tokens.
+				Details can be found in the <a href="https://saferpay.github.io/sndbx/applepay.html#apple-tokens" target="_blank">Integration Guide</a>.
+			</p>
 			
-			<h2>New Management API</h2>
-			<p>A new Management API allows to list activated payment means and currencies for a terminal. 
+			<h2>Management API</h2>
+			<p>A new Management API method allows to list activated payment means and currencies for a terminal. 
 				This can be used e.g. by shop plugins to reduce manual configuration efforts and allows a more user friendly onboarding procedure.
-				Details can be found in the Integration Guide.</p>
+				Details can be found in the <a href="https://docs.saferpay.com/home/interfaces/management-api" target="_blank">Management API documentation</a>.
+			</p>
 
 			<h2>Saferpay Backoffice Improvements</h2>
 			
 			<h3>Redesigned Secure PayGate</h3>
-			<p>A new user interface for our pay-by-link solution Secure PayGate:</p>
-			<ul>
-				<li>Improved usability, look & feel</li>
-				<li>Re-arranged sections for more intuitive use</li>
-				<li>"Offers" have been renamed to "links"</li>
-			</ul>
+				<p>A new user interface for our pay-by-link solution Secure PayGate:
+				<ul>
+					<li>Improved usability, look & feel</li>
+					<li>Re-arranged sections for more intuitive use</li>
+					<li>"Offers" have been renamed to "links"</li>
+				</ul>
+				Details can be found in the <a href="https://docs.saferpay.com/home/interfaces/secure-paygate" target="_blank">Secure PayGate documentation</a>.
+			</p>
 
 			<h3>Transaction labeling for custom workflows</h3>
 			<p>A transaction labeling ability has been introduced in the Backoffice to support workflows and custom transaction states. 
-				Details can be found in the Backoffice manual.</p>
+				Details can be found in the <a href="https://docs.saferpay.com/home/interfaces/backoffice" target="_blank">Backoffice manual</a>.
+			</p>
 			
 			<h3>Ability to choose another terminal for re-authorizations</h3>
 			<p>For re-authorizations (where a follow-up payment is being made which references an earlier payment), merchants can now choose a 
